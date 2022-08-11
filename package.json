@@ -1,0 +1,23 @@
+{
+  "name": "js-cookbook-4th-edition-bethany-griggs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgenylyozin/node-js-cookbook-4th-edition-bethany-griggs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evgenylyozin/node-js-cookbook-4th-edition-bethany-griggs/issues"
+  },
+  "homepage": "https://github.com/evgenylyozin/node-js-cookbook-4th-edition-bethany-griggs#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.1",
+    "ts-node": "^10.9.1"
+  }
+}
