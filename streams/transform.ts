@@ -1,11 +1,11 @@
 import fs from 'fs'
 import { Transform } from 'stream'
 
-const rs = fs.createReadStream('/dev/random')
+const rs = fs.createReadStream('/dev/random', { encoding: 'base64' })
 
-const Decoder = new Transform({
+const Upper = new Transform({
   transform(chunk, encoding, callback) {
     callback(null, chunk.toString().toUpperCase())
   },
 })
-rs.pipe(Decoder).pipe(process.stdout)
+rs.pipe(Upper).pipe(process.stdout)
