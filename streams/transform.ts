@@ -5,7 +5,8 @@ const rs = fs.createReadStream('/dev/random', { encoding: 'base64' })
 
 const Upper = new Transform({
   transform(chunk, encoding, callback) {
-    callback(null, chunk.toString().toUpperCase())
+    const processedData = chunk.toString().toUpperCase()
+    callback(null, processedData)
   },
 })
 rs.pipe(Upper).pipe(process.stdout)
