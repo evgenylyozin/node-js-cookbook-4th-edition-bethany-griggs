@@ -20,6 +20,7 @@
   "devDependencies": {
     "@types/formidable": "^2.0.5",
     "@types/node": "^18.7.1",
+    "@types/ws": "^8.5.3",
     "ts-node": "^10.9.1"
   },
   "dependencies": {
