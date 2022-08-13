@@ -3,6 +3,8 @@ import koa from 'koa'
 import serve from 'koa-static'
 import Router from 'koa-router'
 import index from './koaIndexRouter'
+import views from 'koa-views'
+
 
 const router = new Router()
 const PORT = process.env.PORT || 3000
@@ -10,6 +12,9 @@ const PORT = process.env.PORT || 3000
 const app = new koa()
 
 app.use(serve(path.resolve(process.cwd(), 'web-frameworks/public')))
+app.use(views(path.resolve(process.cwd(), 'web-frameworks/views'), {
+  extension: "ejs"
+}))
 
 router.use('/', index.routes())
 app.use(router.routes())
