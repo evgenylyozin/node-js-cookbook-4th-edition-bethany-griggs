@@ -6,8 +6,7 @@ const PORT = process.env.PORT || 3000
 
 const app = express()
 
-app.use(express.static(path.resolve(process.cwd(), '/web-frameworks/public')))
-
+app.use(express.static(path.resolve(process.cwd(), 'web-frameworks/public')))
 app.use('/', indexRouter)
 
 app.listen(PORT, () => {
