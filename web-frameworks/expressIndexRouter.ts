@@ -9,4 +9,11 @@ router.get('/', (req, res) => {
   })
 })
 
+router.post('/', (req, res) => {
+  console.log('Сервер получил пост запрос со следующими данными:', req.body)
+  res.render('index', {
+    title: 'Пост запрос на Экспресс с ejs',
+  })
+})
+
 export default router
