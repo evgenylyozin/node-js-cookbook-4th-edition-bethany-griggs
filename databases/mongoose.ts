@@ -1,5 +1,10 @@
 import mongoose from 'mongoose'
 
+/**
+ * Перед запуском нужно запустить контейнер с mongodb сервером
+ * docker run --publish 27017:27017 --name node-mongo --detach mongo:4
+ */
+
 const URI = 'mongodb://localhost:27017/customers'
 
 mongoose.connect(URI)
