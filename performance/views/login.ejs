@@ -1,0 +1,24 @@
+<html>
+    <head>
+        
+    <title>Express.js - Логин</title>
+      
+  </head>
+    
+  <body>
+        
+    <h1>Войти</h1>
+        <% if (fail) { %>     
+    <h2>Ошибка входа.</h2>
+        <% } %>     
+    <form method="post" action="login">
+      Ник: <input type="text" name="username" /> Пароль:
+      <input type="password" name="password" />       <input
+        type="submit"
+        value="Login"
+      />
+          
+    </form>
+      
+  </body>
+</html>
