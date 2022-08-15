@@ -1,10 +1,10 @@
-import express from 'express'
-import path from 'path'
+import * as express from 'express'
+import * as path from 'path'
 import indexRouter from './expressIndexRouter'
 import authRouter from './expressAuthRouter'
 import logger from './expressMiddleware'
-import bodyParser from 'body-parser'
-import session from 'express-session'
+import * as bodyParser from 'body-parser'
+import * as session from 'express-session'
 import helmet from 'helmet'
 
 const PORT = process.env.PORT || 3333
