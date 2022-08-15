@@ -5,6 +5,7 @@ import authRouter from './expressAuthRouter'
 import logger from './expressMiddleware'
 import bodyParser from 'body-parser'
 import session from 'express-session'
+import helmet from "helmet"
 
 const PORT = process.env.PORT || 3333
 
@@ -12,7 +13,7 @@ const app = express()
 
 app.set('views', path.resolve(process.cwd(), 'security/views'))
 app.set('view engine', 'ejs')
-
+app.use(helmet())
 app.use(
   session({
     name: 'SESSIONID',
